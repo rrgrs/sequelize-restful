@@ -53,21 +53,18 @@ $ curl http://localhost:3000/api
 
 ```js
 {
-  "status": "success",
-  "data": [
-    {
-      "name": "Tag",
-      "tableName": "Tags"
-    },
-    {
-      "name": "Image",
-      "tableName": "Images"
-    },
-    {
-      "name": "Project",
-      "tableName": "Projects"
-    }
-  ]
+  {
+    "name": "Tag",
+    "tableName": "Tags"
+  },
+  {
+    "name": "Image",
+    "tableName": "Images"
+  },
+  {
+    "name": "Project",
+    "tableName": "Projects"
+  }
 }
 ```
 
@@ -83,29 +80,26 @@ The result of the request is part of the response headers! The header's name is 
 
 ```js
 {
-  "status": "success",
-  "data": {
-    "name": "Tag",
-    "tableName": "Tags",
-    "attributes": {
-      "title": "VARCHAR(255)",
-      "id": {
-        "type": "INTEGER",
-        "allowNull": false,
-        "primaryKey": true,
-        "autoIncrement": true
-      },
-      "createdAt": {
-        "type": "DATETIME",
-        "allowNull": false
-      },
-      "updatedAt": {
-        "type": "DATETIME",
-        "allowNull": false
-      },
-      "ProjectId": {
-        "type": "INTEGER"
-      }
+  "name": "Tag",
+  "tableName": "Tags",
+  "attributes": {
+    "title": "VARCHAR(255)",
+    "id": {
+      "type": "INTEGER",
+      "allowNull": false,
+      "primaryKey": true,
+      "autoIncrement": true
+    },
+    "createdAt": {
+      "type": "DATETIME",
+      "allowNull": false
+    },
+    "updatedAt": {
+      "type": "DATETIME",
+      "allowNull": false
+    },
+    "ProjectId": {
+      "type": "INTEGER"
     }
   }
 }
@@ -121,14 +115,11 @@ $ curl http://localhost:3000/api/Tags/1
 
 ```js
 {
-  "status": "success",
-  "data": {
-    "title": "foo",
-    "id": 1,
-    "createdAt": "2013-02-09T09:48:14.000Z",
-    "updatedAt": "2013-02-09T09:48:14.000Z",
-    "ProjectId": 1
-  }
+  "title": "foo",
+  "id": 1,
+  "createdAt": "2013-02-09T09:48:14.000Z",
+  "updatedAt": "2013-02-09T09:48:14.000Z",
+  "ProjectId": 1
 }
 ```
 
@@ -142,13 +133,10 @@ curl -d "title=hallo%20world" http://localhost:3000/api/Tags
 
 ```js
 {
-  "status": "success",
-  "data": {
-    "title": "hallo world",
-    "id": 1,
-    "createdAt": "2013-02-09T09:48:14.000Z",
-    "updatedAt": "2013-02-09T09:48:14.000Z"
-  }
+  "title": "hallo world",
+  "id": 1,
+  "createdAt": "2013-02-09T09:48:14.000Z",
+  "updatedAt": "2013-02-09T09:48:14.000Z"
 }
 ```
 
@@ -164,14 +152,11 @@ It returns the updated record
 
 ```js
 {
-  "status": "success",
-  "data": {
-    "title": "fnord",
-    "id": 1,
-    "createdAt": "2013-02-14T19:52:04.000Z",
-    "updatedAt": "2013-02-14T19:53:30.066Z",
-    "ProjectId": 1
-  }
+  "title": "fnord",
+  "id": 1,
+  "createdAt": "2013-02-14T19:52:04.000Z",
+  "updatedAt": "2013-02-14T19:53:30.066Z",
+  "ProjectId": 1
 }
 ```
 
@@ -185,8 +170,7 @@ curl -i -X DELETE http://localhost:3000/admin/api/Tags/3
 
 ```js
 {
-  "status": "success",
-  "data": {}
+
 }
 ```
 
@@ -203,14 +187,11 @@ curl -i -X GET http://localhost:3000/admin/api/Projects/1/Tags
 
 ```js
 {
-  "status": "success",
-  "data": {
-    "title": "foo",
-    "id": 1,
-    "createdAt": "2013-02-09T09:48:14.000Z",
-    "updatedAt": "2013-02-09T09:48:14.000Z",
-    "ProjectId": 1
-  }
+  "title": "foo",
+  "id": 1,
+  "createdAt": "2013-02-09T09:48:14.000Z",
+  "updatedAt": "2013-02-09T09:48:14.000Z",
+  "ProjectId": 1
 }
 ```
 
@@ -224,8 +205,6 @@ curl -i -X DELETE http://localhost:3000/admin/api/Photo/1/Photographer
 
 ```js
 {
-  "status": "success",
-  "data": {}
 }
 ```
 
@@ -239,7 +218,5 @@ curl -i -X DELETE http://localhost:3000/admin/api/Projects/1/Tags/3
 
 ```js
 {
-  "status": "success",
-  "data": {}
 }
 ```
